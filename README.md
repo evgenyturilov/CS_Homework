@@ -1,5 +1,7 @@
 # CS_Homework
-  Task_2 "Даны два числа, показать большее и меньшее число"
+  Task_1 "Вывести квадрат числа"
+  Task_2 "По двум заданным числам проверить является ли первое квадратом второго"
+  Task_3 "Даны два числа, показать большее и меньшее число"
   
     int a = new Random().Next(1,11);
     int b = new Random().Next(1,11);
@@ -13,7 +15,8 @@
     
     if (a == b) Console.WriteLine($"{a} и {b} равны");
    
- Task_4 "Найти максимальное из трех чисел"
+ Task_4 "По заданному номеру дня недели вывести его название" 
+ Task_5 "Найти максимальное из трех чисел"
  
     int a = new Random().Next(1,11);
     int b = new Random().Next(1,11);
@@ -29,15 +32,24 @@
     if (b > a) max = b;
     if (c > a) max = c;
     Console.WriteLine($"Максимальное число {max}");
-    
- Task_6 "Выяснить является ли число четным"
+ Task_6 "Написать программу вычисления функции y = f(a)   
+ Task_7 "Выяснить является ли число четным"
  
     int a = new Random().Next(1,100);
+    Console.WriteLine(a);
+    Console.WriteLine();
+    
+    bool oddOrEven(int arg)
+    {
+        if (arg%2 == 0) return true;
+        else return false;
+    }
 
-    if (a%2 == 0) Console.WriteLine($"Число {a} четное");
+    if (oddOrEven(a) == true) Console.WriteLine($"Число {a} четное");
     else Console.WriteLine($"Число {a} нечетное");
  
- Task_8 "Показать четные числа от 1 до N"
+ Tasl_8 "Показать числа от -N до N"
+ Task_9 "Показать четные числа от 1 до N"
    
 
     int N = Convert.ToInt32(Console.ReadLine());
@@ -58,4 +70,4 @@
         if (numbers[i]%2 == 0) Console.Write(numbers[i] + " ");
     }
     
- 
+ Task_10 "Показать последнюю цифру трехзначного числа"
