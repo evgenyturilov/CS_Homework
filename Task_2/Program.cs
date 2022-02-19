@@ -8,7 +8,7 @@ int numberTwo = Convert.ToInt32(Console.ReadLine());
 
 bool SquareOrNot(int arg1, int arg2)
 {
-    if (arg1/arg2 == arg2) return true;
+    if (arg1*arg1 == arg2) return true;
     else return false;
 }
 

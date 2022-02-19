@@ -9,6 +9,9 @@ System.Console.WriteLine($"Последняя цифра вашего числа
 System.Console.WriteLine("Введите число:");
 string number = Console.ReadLine();
 
-int numberCipher = number.Length;
+//int numberCipher = number.Length;
 
-System.Console.WriteLine($"Последняя цифра в вашем числе: {number[numberCipher - 1]}");
+//System.Console.WriteLine($"Последняя цифра в вашем числе: {number[numberCipher - 1]}");
+
+System.Console.Write($"Последняя цифра в вашем числе: ");
+Console.WriteLine(number[2]);
