@@ -1,19 +1,13 @@
 ﻿// Подсчитать сумму цифр в числе
 
-/*
-//Решение №1
+int randomNumber = new Random().Next(1,10000000);// Если вводить в Next больше 9-ти зназного числа, птшет ошибку "не удается преобразовать из "long" в "int"", каким способом можно это исправить?
+int sum = 0;
+int number = randomNumber;
 
-System.Console.WriteLine("Введите число");
-string yourNumber = Console.ReadLine();
+while (number!= 0)
+{
+    sum = sum + number%10;
+    number = number/10;
+}
 
-System.Console.WriteLine($"В вашем числе {yourNumber.Length} цифр.");
-*/
-
-// Решение №2
-
-double number = new Random().Next(1,1000000000);// Если вводить в Next больше 9-ти зназного числа, птшет ошибку "не удается преобразовать из "long" в "int"", каким способом можно это исправить?
-Console.WriteLine(number);
-
-string a = Convert.ToString(number);
-
-Console.WriteLine($"В числе {number} {a.Length} цифр.");
+System.Console.WriteLine($"Сумма цифр в числе {randomNumber} равна {sum}");
