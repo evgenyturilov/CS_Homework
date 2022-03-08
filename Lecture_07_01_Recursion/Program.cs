@@ -75,7 +75,7 @@ Console.WriteLine(PowerFor(2, 6));
 Console.WriteLine(PowerRec(2, 6));
 Console.WriteLine(PowerRec(2, 6));
 
-// В некотором машинном алфавите имеются четыре буквы "а", "и", "с", "в".
+// В некотором машинном алфавите имеются четыре буквы "а", "и", "с".
 // Покажите все слова, состоящие из T букв, которые можно построить из букв этого алфавита.
 // 17:00 - 18:00
 
@@ -92,5 +92,4 @@ void FindWords(string alphabet, char[] word, int length = 0)
         FindWords(alphabet, word, length + 1);
     }
 }
-
-FindWords("аисв", new char[5]);
+FindWords("аис", new char[5]);
