@@ -6,7 +6,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 int Series(int n)
 {
     if ( n == 1) return 1;
-    else return Series(n-1) + 1;
+    else return  1 + Series(n-1);
 }
 
 
@@ -15,3 +15,4 @@ for (int i = 1; i <= number; i++)
 {
     Console.Write($"{Series(i)} ");
 }
+Console.WriteLine();
