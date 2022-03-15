@@ -31,7 +31,7 @@ void PrintArray(int[,] matr)
     }
 }
 
-async void FillArray(int[,] matr)
+void FillArray(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
