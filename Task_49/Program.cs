@@ -25,7 +25,7 @@ void PrintArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            Console.Write($" [{i},{j}]={matr[i,j],6:F2} ");
+            Console.Write($"| {matr[i,j],6:F2} |");
         }
         Console.WriteLine();
     }
