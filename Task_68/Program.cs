@@ -5,14 +5,14 @@ int numberM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число:");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
-int Series(int n)
+
+void Function(int n, int m)
 {
-    if ( n == 1) return 1;
-    else return Series(n - 1) + 1;
+    if (n < m)
+    {
+        if (n == m) return m;
+        else return (Function((m - 1), n));
+    }
 }
 
-Console.WriteLine($"Натуральные числа от {numberM} до {numberN}:");
-for (int i = numberM; i <= numberN; i++)
-{
-    Console.Write($"{Series(i)} ");
-}
+System.Console.WriteLine(Function(numberN,numberM));
