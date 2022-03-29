@@ -24,21 +24,21 @@ void FillArray(int m, int n)
     }
 }
 
-void ChangeStringsToColumns(int[,] matr)
+int[,] ChangeStringsToColumns(int[,] matr)
 {
+    int [,] revertMatr = new int[m, n];
     if (m != n) Console.WriteLine("Матрица не квадратная!");
     else 
         {
-            for (int i = 0; i < m - 1; i++)
+            for (int i = 0; i < matr.GetLength(0); i++)
                 {
-                    for (int j = 0; j < m - 1; j++)
+                    for (int j = 0; j < matr.GetLength(1); j++)
                     {
-                        int temp = matr[i + 1, j];
-                        matr[i + 1, j] = matr[i, j + 1];
-                        matr[i, j + 1] = temp;
+                        revertMatr[i,j] = matr[j,i];
                     }
                 }
         }
+    return revertMatr;
 }
 
 void PrintArray(int[,] matr)
@@ -58,4 +58,4 @@ FillArray(m, n);
 PrintArray(matrix);
 Console.WriteLine();
 ChangeStringsToColumns(matrix);
-PrintArray(matrix);
+PrintArray(ChangeStringsToColumns(matrix));
