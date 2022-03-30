@@ -1,20 +1,28 @@
 ﻿// Найти сумму элементов от M до N, N и M заданы.
 
-Console.WriteLine("Введите первое число:");
-int numberM = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число:");
-int numberN = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите первое число: ");
+int numberOne = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int numberTwo = Convert.ToInt32(Console.ReadLine());
 
-int Series(int m, int n)
+int SumOfNumbers(int n, int m)
 {
-    if (n == m) return m;
-    else return (Series(n - 1) + (Series(n - 1) + 1));
+    if (n == m) return n;
+    else return (n + (SumOfNumbers(n + 1, m)));
 }
 
-int n = numberN;
-for (int i = numberM; i < n; i++)
+if (numberOne < numberTwo)
 {
-    
-    Console.WriteLine(Series(i, n));   
+    Console.Write($"Сумма чисел от {numberOne} до {numberTwo} равна: ");
+    Console.WriteLine(SumOfNumbers(numberOne,numberTwo));
+}
+if (numberOne > numberTwo)
+{
+    Console.Write($"Сумма чисел от {numberTwo} до {numberOne} равна: ");
+    Console.WriteLine(SumOfNumbers(numberTwo,numberOne));
+}
+if (numberOne == numberTwo)
+{
+     Console.WriteLine("Числа равны!");
 }
 
