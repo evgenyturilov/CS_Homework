@@ -2,7 +2,7 @@
 
 int Rec(int a, int b)
 {
-    if (b == 1) return a;
+    if (b == 0) return 1;
     else return a*Rec(a,b - 1);;
 }
 
